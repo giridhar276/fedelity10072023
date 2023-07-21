@@ -1,0 +1,3047 @@
+
+
+alist = [10,20,30,2,45,16,9,10,10,10,10]
+# add single object
+alist.append(50)
+print('After appending :',alist)
+# adding multiple values
+alist.extend([93,19,7])
+print('After extending :',alist)
+# list.insert(index,value)
+alist.insert(1,200)
+print('After inserting :',alist)
+#list.pop(index) - value at that index will be removed
+alist.pop(1)
+print('After pop:',alist)
+# list.remove(value)
+alist.remove(10) # will remove the first occurence of the value
+print('After removing :',alist)
+# remove all the occurences 
+#          range(0,5)
+for val in range(0,alist.count(10)):
+    alist.remove(10)
+print(alist)
+
+if 10000 in alist:
+    alist.remove(10000)
+else:
+    print('value doesnt exist')
+    
+name = 'python programming'
+if 'prog' in name:
+    print('substring exists')
+
+#sort the values
+alist.sort()
+print('After sorting :',alist)
+# descending order
+alist.sort(reverse = True)
+print('After sorting :',alist)
+# reversing
+alist.reverse()
+print('After reversing:',alist)
+
+
+
+
+
+###################### dictionary
+book = {"chap1":10 ,"chap2":20,"chap3":30}
+print(book)
+# add new key,value to the dictionary
+#dictionary[newkey] = value
+book['chap4'] = 40
+book['chap5'] = 50
+print(book)
+# display individual values
+print(book['chap1'])
+# display keys
+print(book.keys())
+
+for key in book.keys():
+    print(key)
+
+for key in book:
+    print(key)
+
+# displaay values
+print(book.values())
+
+for value in book.values():
+    print(value)
+    
+    
+# dispplay key,value from dictionary
+print(book.items())
+
+for key,value in book.items():
+    print(key,value)GlossSeeAlso
+    
+# check for existence
+if 'chap133' in book:
+    print('key exists..!!')
+else:
+    print('key doesnt exist')
+    
+# check for existence
+if 20 in book.values():
+    print('value exists..!!')
+else:
+    print('value doesnt exist')
+    
+    
+# remove key-value from dictionary
+book.pop('chap2')
+print('After pop', book)
+
+# remove one key-value
+book.popitem()
+print(book)
+
+
+print(book['chap100'])
+# if key is not existing... will dipaly keyError
+# if key is existing ... will display the value
+print(book.get('chap100'))
+
+
+
+
+# []
+name = 'python'
+name[0]
+
+alist = [10,20,30]
+alist[0]
+
+book = {"chap1":10}
+print(book['chap1'])
+
+atup = (40,50,60)
+atup[1]
+
+print(name.upper())
+alist.append(50)
+book.keys()
+
+
+
+
+
+
+
+
+
+
+
+data = {
+    "glossary": {
+        "title": "example glossary",
+		"GlossDiv": {
+            "title": "S",
+			"GlossList": {
+                "GlossEntry": {
+                    "ID": "SGML",
+					"SortAs": "SGML",
+					"GlossTerm": "Standard Generalized Markup Language",
+					"Acronym": "SGML",
+					"Abbrev": "ISO 8879:1986",
+					"GlossDef": {
+                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
+						"GlossSeeAlso": ["GML", "XML"]
+                    },
+					"GlossSee": "markup"
+                }
+            }
+        }
+    }
+}
+
+
+#Standard Generalized Markup Language
+print(data['glossary']['GlossDiv']['GlossList']['GlossEntry']['GlossTerm'])
+
+#XM
+print(data['glossary']['GlossDiv']['GlossList']['GlossEntry']['GlossDef']['GlossSeeAlso'][1])
+
+
+
+
+
+
+############################################################################################
+
+colors = [
+{
+"colors": "red",
+"values": "#f00"
+},
+{
+"colors": "green",
+"values": "#0f0"
+},
+{
+"colors": "blue",
+"values": "#00f"
+},
+{
+"colors": "cyan",
+"values": "#0ff"
+},
+{
+"colors": "magenta",
+"values": "#f0f"
+},
+{
+"colors": "yellow",
+"values": "#ff0"
+},
+{
+"colors": "black",
+"values": "#000"
+}
+]
+write a program to display all the colors and its values.
+
+yellow  #ff0
+magenta #f0f
+..
+..
+..
+
+########################################################################################################################
+
+define dictionary as below
+
+book = {"chap1":[10,'UK','Mark'] ,"chap2":[20,'US','Pet']}
+
+write a program to add '200pages' to the list of chap1  and
+                       '400pages' to the list of chap2
+
+Output:
+{"chap1":[10,'UK','Mark','200pages'] ,"chap2":[20,'US','Pet','400pages']}
+
+
+book['chap1'].append('200pages')
+book['chap2'].append('400pages')
+
+print(book)
+
+
+
+
+
+########################################################################################################################
+
+alist= [
+  {
+    "login": "mojombo",
+    "id": 1,
+    "node_id": "MDQ6VXNlcjE=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/1?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/mojombo",
+    "html_url": "https://github.com/mojombo",
+    "followers_url": "https://api.github.com/users/mojombo/followers",
+    "following_url": "https://api.github.com/users/mojombo/following{/other_user}",
+    "gists_url": "https://api.github.com/users/mojombo/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/mojombo/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/mojombo/subscriptions",
+    "organizations_url": "https://api.github.com/users/mojombo/orgs",
+    "repos_url": "https://api.github.com/users/mojombo/repos",
+    "events_url": "https://api.github.com/users/mojombo/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/mojombo/received_events",
+    "type": "User",
+    "site_admin": False
+  },
+  {
+    "login": "defunkt",
+    "id": 2,
+    "node_id": "MDQ6VXNlcjI=",
+    "avatar_url": "https://avatars0.githubusercontent.com/u/2?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/defunkt",
+    "html_url": "https://github.com/defunkt",
+    "followers_url": "https://api.github.com/users/defunkt/followers",
+    "following_url": "https://api.github.com/users/defunkt/following{/other_user}",
+    "gists_url": "https://api.github.com/users/defunkt/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/defunkt/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/defunkt/subscriptions",
+    "organizations_url": "https://api.github.com/users/defunkt/orgs",
+    "repos_url": "https://api.github.com/users/defunkt/repos",
+    "events_url": "https://api.github.com/users/defunkt/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/defunkt/received_events",
+    "type": "User",
+    "site_admin": False
+  }
+]
+
+ write a program to display all the keys and values line by line.
+ 
+for user in alist:
+    #print(type(user))
+    for key,value in user.items():
+        print(key.ljust(20),value)
+        
+
+########################################################################################################################
+
+
+define a dictionray as below
+
+{
+"id": "0001",
+"type": "donut",
+"name": "Cake",
+"image":
+{
+"url": "images/0001.jpg",
+"width": 200,
+"height": 200
+},
+"thumbnail":
+{
+"url": "images/thumbnails/0001.jpg",
+"width": 32,
+"height": 32
+}
+}
+
+write a program to display the below output:
+
+id            : 0001
+type          :donut
+name          : Cake
+image.width   : 200
+image.height  : 200
+image.url     : images/0001.jpg
+thumbnail.width   : 32
+thumbnail.height : 32
+thumbnail.url      : images/0001.jpg
+
+
+
+for key,value in data.items():
+    if isinstance(value,str):
+        print(key.ljust(15),":",value)
+    elif isinstance(value,dict):
+        for skey,svalue in value.items():
+            finalkey =  key + "." + skey
+            print(finalkey.ljust(15),":",svalue)
+    
+    
+    
+########################################################################################################################
+
+define dictionary as below
+
+
+ydict = {
+  "kind": "youtube#searchListResponse",
+  "etag": "1-m2yskBQFythfE4irbTIeOgYYfBU/PaiEDiVxOyCWelLPuuwa9LKz3Gk",
+  "nextPageToken": "CAUQAA",
+  "regionCode": "KE",
+  "pageInfo": {
+    "totalResults": 4249,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "2-m2yskBQFythfE4irbTIeOgYYfBU/QpOIr3QKlV5EUlzfFcVvDiJT0hw",
+      "id": {
+        "kind": "youtube#channel",
+        "channelId": "UCJowOS1R0FnhipXVqEnYU1A"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "3-m2yskBQFythfE4irbTIeOgYYfBU/AWutzVOt_5p1iLVifyBdfoSTf9E",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Eqa2nAAhHN0"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "4-m2yskBQFythfE4irbTIeOgYYfBU/2dIR9BTfr7QphpBuY3hPU-h5u-4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "IirngItQuVs"
+      }
+    }
+  ]
+}
+
+
+write a program to display all etag  information from the dictionary
+
+1-m2yskBQFythfE4irbTIeOgYYfBU/PaiEDiVxOyCWelLPuuwa9LKz3Gk
+2-m2yskBQFythfE4irbTIeOgYYfBU/QpOIr3QKlV5EUlzfFcVvDiJT0hw
+3-m2yskBQFythfE4irbTIeOgYYfBU/AWutzVOt_5p1iLVifyBdfoSTf9E
+4-m2yskBQFythfE4irbTIeOgYYfBU/2dIR9BTfr7QphpBuY3hPU-h5u-4
+
+
+
+for key,value in ydict.items():
+    if isinstance(value,str) and  key == 'etag':
+        print(value)
+    elif isinstance(value,list):
+        for item in value:
+            if 'etag' in item:
+                print(item['etag'])
+
+
+
+########################################################################################################################
+
+write a program to display the below IP addresses
+
+192.168.0.1
+192.168.0.2
+192.168.0.3
+..
+..
+192.168.0.10
+
+
+
+for value in range(1,11):
+    ip = "192.168.0.{}"
+    print(ip.format(value))
+    
+   
+ip = "198.168.0."
+for value in range(1,11):
+    finalip =ip + str(value)
+    print(finalip)
+
+########################################################################################################################
+
+define some list as below
+
+alist = ["google","oracle","microsoft"]
+
+write a program to
+add "http://www"  at the beginning and  
+add ".com" at tht end of the string
+
+Output:
+http://www.google.com
+http://www/.oracle.com
+http://www.microsoft.com
+
+########################################################################################################################
+
+write a program to display the below IP addresses
+
+192.168.0.1
+192.168.0.2
+192.168.0.3
+..
+..
+192.168.0.10
+192.168.1.1
+192.168.1.2
+192.168.1.3
+..
+..
+192.168.1.10
+
+
+for val in range(0,2):
+    for ival in range(1,11):
+        ip = "192.168.{}.{}".format(val,ival)
+        print(ip)
+########################################################################################################################
+
+
+
+########################################################################################################################
+
+
+
+
+fw = open('C:\\Users\\Administrator\\Desktop\\output\\languages.txt','a')
+fw.write('unix\n')
+fw.close()
+
+
+# r - raw string
+fw = open(r'C:\Users\Administrator\Desktop\output\languages.txt','a')
+fw.write('unix\n')
+fw.close()
+
+
+fw = open('C:/Users/Administrator/Desktop/output/languages.txt','a')
+fw.write('unix\n')
+fw.close()
+
+
+
+
+
+
+https://github.com/giridhar276/fedelity10072023/blob/main/csvfiles.zip
+https://github.com/giridhar276/fedelity10072023/blob/main/jsonfiles.zip
+
+
+
+################################################################################################
+write a program to read adult.csv and display all the lines from the file
+################################################################################################
+write a program to display workclass ,education and occupation columns data
+
+import csv
+with open('adult.csv','r') as fobj:
+    # convert fobj to csv understandable object
+    reader = csv.reader(fobj)
+    for line in reader:
+        print("Workclass :",line[1])
+        print("Education :",line[3])
+        print("Occupation :",line[6])
+        
+################################################################################################
+
+write a program to display all distinct workclass categories
+
+Output:
+State-gov
+Private
+Public
+..
+..
+
+
+
+import csv
+workclass = set()
+with open('adult.csv','r') as fobj:
+    header= fobj.readline()
+    # convert fobj to csv understandable object
+    reader = csv.reader(fobj)
+    for line in reader:
+        workclass.add(line[1])
+    
+    # display the output
+    for item in workclass:
+        item = item.strip()
+        print(item)
+################################################################################################
+
+
+write a program to display the total count of male and female.
+
+Total Male count  : xx
+Total Female count: xx
+
+
+import csv
+male = 0
+female = 0
+with open('adult.csv','r') as fobj:
+    header= fobj.readline()
+    # convert fobj to csv understandable object
+    reader = csv.reader(fobj)
+    for line in reader:
+        line[9] = line[9].strip()
+        if line[9] == 'Male':
+            male = male + 1
+        elif line[9] == 'Female':
+            female = female + 1
+            
+    print('total male count :', male)
+    print('total female count :', female)
+
+################################################################################################
+
+write a proram to display all the lines in the lower case.
+
+with open('adult.csv','r') as fobj:
+    for line in fobj:
+        line = line.strip()
+        print(line.lower())
+        
+        
+        
+import csv
+with open('adult.csv','r') as fobj:
+    # convert fobj to csv understandable object
+    reader = csv.reader(fobj)
+    for line in reader:
+        #print(line)
+        # convert the list to the string with ,
+        singleline = ",".join(line)
+        singleline = singleline.lower()
+        print(singleline)
+
+################################################################################################
+write a progra to read adult2.csv and append all the lines of adult2.csv  TO adult1.csv
+
+
+
+with open('adult2.csv','r') as fr:
+    with open('adult1.csv','a') as fa:
+        for line in fr:
+            fa.write(line)
+
+
+############################################################################
+write a program to read sample4.json and display the output in the below format
+
+Joe,Jackson,male,28,734928293
+James,Smith,male,32,45783993
+..
+
+
+
+import json
+
+with open('sample4.json','r') as fr:
+    # converting file object to json understandable format
+    data = json.load(fr)
+    for item in data['people']:
+        itemlist = list(item.values())
+        #print(itemlist)
+        itemlist[3] = str(itemlist[3])
+        line = ",".join(itemlist)
+        print(line)
+        
+        
+        
+############################################################################
+
+write a program to read 500.json and display the below output
+
+id    : 2140
+title : gj
+location: hermannplatz 5-6 10967 Berlin,Gemary
+UserId : 4051
+----------------
+id    : 2139
+title : dfg
+location: 443 N ROdeo Dr,Bererly Hills ,CA
+UserId : 4051
+---------------
+..
+..
+..
+
+
+
+import json
+
+with open('500.json','r',encoding = 'utf-8') as fr:
+    # converting file object to json understandable format
+    data = json.load(fr)
+    for record in data['feeds']:
+        print('ID       :',record['id'])
+        print('Title    :',record['title'])
+        print('Location :',record['location'])
+        print("---------")
+
+
+
+
+
+
+import json
+
+with open('500.json','r',encoding = 'utf-8') as fr:
+    # converting file object to json understandable format
+    data = json.load(fr)
+    for record in data['feeds']:
+        output = list(record.values())
+        #print(output)
+        for val in output:
+            print(val)
+        print("--------")
+
+############################################################################
+
+
+############################################################################
+
+
+
+############################################################################
+
+############################################################################
+
+
+
+
+print(1,2,3,sep = '\n')
+
+
+print(1,2,end = ' ')
+print(3)
+
+
+
+
+
+
+######################  simple try and except blocks
+
+try:
+    with open('languages.txt','r') as fobj:
+        for line in fobj:
+            line = line.strip()
+            print(line)
+except Exception as err:
+    print("system generated error :",err)
+    print("error found")
+    
+    
+
+################ exception handling with else and finally
+
+try:
+    with open('languages198.txt','r') as fobj:
+        for line in fobj:
+            line = line.strip()
+            print(line)
+except Exception as err:
+    print("system generated error :",err)
+    print("error found")
+else:
+    print('If error is not found in try block')
+    print('this gets executed')
+finally:
+    print('this block will be executed all the times')
+
+
+
+################## with multiple exceptions
+
+
+try:
+    with open('languages198.txt','r') as fobj:
+        for line in fobj:
+            line = line.strip()
+            print(line)
+except FileNotFoundError as err:
+    print("system generated error :",err)
+    print("error found")
+except KeyError as err:
+    print('Key is not found')
+except ValueError as err:
+    print('Invalid operation')
+except (TypeError,IndexError) as err:
+    print('Error found')
+else:
+    print('If error is not found in try block')
+    print('this gets executed')
+finally:
+    print('this block will be executed all the times')
+    
+    
+    
+##########################################################################
+
+
+os         : os level activities
+math       : mathematical operations
+sys        :  sys and python config data
+shutil     : copy,move, rmtree  etc
+urllib     : read the web, downloading the files
+logging    : logging all the events
+smtplib    : sending the mails
+ftplib     : performing ftp operations
+sysconfig  :  sys and python config data
+zipfile    : create/extract the zip files
+rarfile    : create/extract the rar files
+cryptopgraphy : encrypting and decrypting the data or files
+tarfile    : create/extract the tar files
+filecmp    : comparing files or directories
+sqlite3    : python default database
+csv        : reading/writing csv files
+xml        : reading/writing xml files
+calendar   : display month,year calendar info
+datetime   : working with date n time
+time       : working with date n time
+fractions  : working with decimal values
+glob       : display all the files
+heapq      : more of array operations ( getting largest among list )
+subprocess : executing system commands in python (  subprocess.getoutput("ls -ltr")
+pdb        : python debugger
+platform   : platform information
+random     : random operations ( shuffling , random digit ... )
+re         : grep + awk + sed
+socket     : networking programming
+stat       : stats of the file
+statistics : basic statistics
+telnetlib  : accessing remote servers
+
+###################
+
+
+
+#########################################################################
+    
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+write a program to display all the files  and directories from the current directory with proper exception handling
+
+
+
+import os
+import sys
+try:
+    files = os.listdir()
+    for fn files:
+        print(file)
+except Exception as err:
+    print(err)
+    print(sys.exc_info())
+
+------------------------------------------------------------------------------------------------------------------------
+
+write a program to display all the files only  from the current directory with proper exception handling
+
+
+# display files only  
+import os
+import sys
+try:
+    files = os.listdir()
+    for file in files:
+        if os.path.isfile(file):
+            print(file)
+except Exception as err:
+    print(err)
+    print(sys.exc_info())
+   
+   
+   
+# dsiplay directories only
+import os
+import sys
+try:
+    files = os.listdir()
+    for file in files:
+        if os.path.isdir(file):
+            print(file)
+except Exception as err:
+    print(err)
+    print(sys.exc_info())
+    
+    
+
+------------------------------------------------------------------------------------------------------------------------
+
+write a program to display the count of files and directories from the current directory
+
+Total files       : xx
+Total directories : x
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+write a program to display all the files from the C:\ line by line with exception handling
+
+import os
+import sys
+try:
+    files = os.listdir('C:\\')
+    for file in files:
+        print(file)
+except Exception as err:
+    print(err)
+    print(sys.exc_info())    
+   
+------------------------------------------------------------------------------------------------------------------------
+
+write a proram to create 10 directories as below
+
+dir1
+dir2
+..
+..
+dir10
+
+
+# creating 10 directories
+import os    
+for val in range(1,11):
+    dirname = "dir" + str(val)
+    if not os.path.exists(dirname):
+        os.mkdir(dirname)
+    else:
+        print(dirname,'already exists')
+------------------------------------------------------------------------------------------------------------------------
+
+write a program to display all the files and its size
+
+Output:
+file1.py   100 bytes
+file2.py    34 bytes
+
+
+# display files only  
+import os
+import sys
+try:
+    files = os.listdir()
+    for file in files:
+        if os.path.isfile(file):
+            print(file.ljust(20),os.path.getsize(file),"bytes")
+except Exception as err:
+    print(err)
+    print(sys.exc_info())
+
+------------------------------------------------------------------------------------------------------------------------
+
+create two folders as below in the local directory
+source       :  ( copy few files to the source folder)
+destination  :  --- will be empty --
+
+
+write a program to copy all the files fro source folder to destination folder
+
+
+import shutil
+import os
+try:
+    source = "C:\\Users\\Administrator\\Desktop\\programs\\source\\"
+    destination = "C:\\Users\\Administrator\\Desktop\\programs\\destination\\"
+   
+   
+    for file in os.listdir(source):
+        if os.path.isfile(file):
+            print(file)
+            shutil.copy(source + file,destination)
+except Exception as err:
+    print(err)
+    
+    
+
+------------------------------------------------------------------------------------------------------------------------
+
+write a program to display the below information
+
+1) current working directory
+2) login name
+3) current process id
+4) current python version
+5) all the libraries available in python
+6) all the environment variables
+7) operating system name
+8) platform name
+9)current date and time
+10)statistics of realestate.csv file
+11)create empty file with today's timestamp
+
+
+
+import os
+import sys
+import platform
+import  datetime
+#current working directory
+print(os.getcwd())
+#login name
+print(os.getlogin())
+# process
+print(os.getpid())
+
+# display version
+print (sys.version_info)
+# display all libraries
+print(sys.modules)
+# display environment variables
+print(os.environ)
+for key,value in os.environ.items():
+    print(key,value)
+
+print(platform.machine())
+print(datetime.datetime.now())
+print(os.stat('dictionary1.py'))
+
+import time
+filename = time.strftime(('%d_%b_%Y.xlsx'))
+fobj = open(filename,'w')
+fobj.close()
+------------------------------------------------------------------------------------------------------------------------
+
+write a program to display all the files and directories separately as below
+
+Files
+-----
+file1
+file2
+file3
+
+
+directories
+------------
+dir1
+dir2
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+write a program to display the below information
+
+-CPU percentage
+-virtual memory
+-disk partitions
+
+
+
+import psutil
+
+
+
+
+
+
+
+languages.txt
+---------------
+python,unix
+unix and linux
+pyttttthon programming
+python
+pytthon 
+pytttttttthon programming
+java and python
+programming in python
+pyttttttttttthon programming
+pyttttttttttttttttthon programming
+pytttttttthon programming
+pyhon
+oracle
+python
+mython
+jython
+rython
+python programming
+
+
+
+
+
+
+
+#  ^  - at the beginning of the string          
+import re            
+with open('languages.txt','r') as fr:
+    for line in fr:
+        line = line.strip()
+        if re.search('^python',line):
+            print(line)
+            
+            
+# $  at the end of the string
+import re            
+with open('languages.txt','r') as fr:
+    for line in fr:
+        line = line.strip()
+        if re.search('python$',line):
+            print(line)
+            
+            
+#  * - zero or more occurences of the preceding character
+
+import re            
+with open('languages.txt','r') as fr:
+    for line in fr:
+        line = line.strip()
+        if re.search('python$',line):
+            print(line)
+            
+
+            
+#   +  : one or more occurences of the preceding character
+import re            
+with open('languages.txt','r') as fr:
+    for line in fr:
+        line = line.strip()
+        if re.search('pyt+hon',line):
+            print(line)
+            
+            
+#   ? - either zero or one occurence of the preceding character
+import re            
+with open('languages.txt','r') as fr:
+    for line in fr:
+        line = line.strip()
+        if re.search('pyt?hon',line):
+            print(line)
+            
+            
+#  { min,max} - min to max occurences of the preceding character
+
+import re            
+with open('languages.txt','r') as fr:
+    for line in fr:
+        line = line.strip()
+        if re.search('pyt{2,7}hon',line):
+            print(line)
+            
+            
+            
+            
+# [characters] - character class - one character among the pool of characters
+
+import re            
+with open('languages.txt','r') as fr:
+    for line in fr:
+        line = line.strip()
+        if re.search('[pqrym]ython',line):   # python or qython or rython or yython or mython
+            print(line)
+            
+            
+            
+            
+# .  - any single character or digit
+import re            
+with open('languages.txt','r') as fr:
+    for line in fr:
+        line = line.strip()
+        if re.search('.ython',line):
+            print(line)
+            
+            
+            
+            
+#  (pattern1|pattern2) 
+
+            
+import re            
+with open('languages.txt','r') as fr:
+    for line in fr:
+        line = line.strip()
+        if re.search('(python|java)',line):
+            print(line)
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+############################
+
+
+
+import re
+
+line  = "The rain in Spain"
+x = re.findall("ai", line)
+print(x)
+
+
+
+
+
+line = "The rain in Spain"
+x = re.findall("Portugal", line)
+print(x)
+
+
+import re
+string = 'hello 12 hi 89. Howdy 34'
+pattern = '\d+'
+result = re.findall(pattern, string)
+print(result)
+
+
+
+
+import re
+string = 'Twelve:12 Eighty nine:89.'
+pattern = '\d+'
+result = re.split(pattern, string)
+print(result)
+
+
+
+
+
+
+
+
+import re
+
+string = 'abc    12de 23 \n f45 6'
+pattern = '\s+' 
+replace = ' '
+print(new_string)
+
+
+
+
+
+
+
+
+import re
+string = '39801 356, 2102 1111'
+
+pattern = '(\d{3}) (\d{2})'
+match = re.search(pattern, string)
+if match:
+  print(match.group())
+else:
+  print("pattern not found")
+
+
+
+
+
+
+
+
+import re
+string = '39801 356, 2102 1111'
+
+pattern = '(\d{3}) (\d{2})'
+x = re.findall(pattern, string)
+print(x)
+
+
+
+
+
+abc@gmail
+
+
+
+import re
+
+regex = '[\w]+@[\w]+'
+
+email = "giridhar276@gmail.com"
+if re.search(regex,email):
+    print("valid email")
+else:
+    print("Invalid email")
+
+
+
+
+
+
+
+
+
+
+import reTap on a clip to paste it in the text box.
+regex = '^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$'
+email = "giridhar276@gmail.com"
+
+if re.search(regex,email):
+    print("valid email")
+else:
+    print("Invalid email")
+    
+
+
+
+
+            
+
+            
+            
+            
+display all existing databases
+---------------------------
+show databases ;
+
+create your database
+---------------------
+create database adultinfo ;
+
+access your database
+--------------------
+use adultinfo;
+
+display all existing tables
+---------------------------
+show tables ;
+
+creating table
+---------------
+create table adult( workclass varchar(100), education varchar(100) , occupation varchar(100) );
+
+view the structure
+------------------
+desc adult;
+
+inserting records
+----------------
+
+
+
+display all the records
+--------------------------
+select * from adult;
+
+
+
+
+
+
+
+step1:  connect to databaes
+step2:  define your query ( select, insert, update , delete )
+step3:  execute the query
+step4:  display the records
+step5:  close the connection
+
+
+
+
+# display all the records
+import pymysql
+try:
+    #step1
+    conn = pymysql.connect(host='127.0.0.1',port=3306,user='root',password='Password@1')
+    
+    if conn:
+        cursor = conn.cursor()
+        #step2
+        query = "select * from adultinfo.adult"
+        #step3
+        cursor.execute(query)
+        #step4
+        for record in cursor.fetchall():
+            print(record)
+        #step5
+        conn.close()
+    else:
+        print('connection not successful.. something went wrong')
+except pymysql.err.DataError as err:
+    print(err)
+except pymysql.err.DatabaseError as err:
+    print(err)
+except pymysql.err.OperationalError as err:
+    print(err)    
+except (pymysql.err.IntegrityError,pymysql.err.InternalError) as err:
+    print(err)
+except Exception as err:
+    print(err)
+
+
+
+
+
+
+
+import pymysql
+try:
+    #step1
+    conn = pymysql.connect(host='127.0.0.1',port=3306,user='root',password='Password@1') 
+    if conn:
+        cursor = conn.cursor()
+        #step2
+        query = "select * from adultinfo.adult"
+        #step3
+        cursor.execute(query)
+        #step4
+        for record in cursor.fetchall():
+            worktype = record[0]
+            education = record[1]
+            occupation = record[2]
+            print(worktype,education,occupation)
+            print("------")
+        #step5
+        conn.close()
+    else:
+        print('connection not successful.. something went wrong')
+except pymysql.err.DataError as err:
+    print(err)
+except pymysql.err.DatabaseError as err:
+    print(err)
+except pymysql.err.OperationalError as err:
+    print(err)    
+except (pymysql.err.IntegrityError,pymysql.err.InternalError) as err:
+    print(err)
+except Exception as err:
+    print(err)
+
+
+
+
+## insert operation
+import pymysql
+try:
+    #step1
+    conn = pymysql.connect(host='127.0.0.1',port=3306,user='root',password='Password@1') 
+    if conn:
+        cursor = conn.cursor()
+        #step2
+        query = "insert into adultinfo.adult values('{}','{}','{}')".format('Private','PhD','Doctor')
+        #step3
+        cursor.execute(query)
+        #step4
+        print(cursor.rowcount,"record inserted")
+        #step5
+        conn.commit()
+        
+        conn.close()
+    else:
+        print('connection not successful.. something went wrong')
+except pymysql.DataError as err:
+    print(err)
+except pymysql.DatabaseError as err:
+    print(err)
+except pymysql.OperationalError as err:
+    print(err)    
+except (pymysql.IntegrityError,pymysql.InternalError) as err:
+    print(err)
+except Exception as err:
+    print(err)
+
+
+            
+            
+            
+            
+            
+            
+            
+
+
+import pymysql
+try:
+    #step1
+    conn = pymysql.connect(host='127.0.0.1',port=3306,user='root',password='Password@1') 
+    if conn:
+        cursor = conn.cursor()
+        #step2
+        query = "insert into adultinfo.adult values('{}','{}','{}')".format('Private','PhD','Doctor')
+        #query= "insert into adultinfo.adult values('Public','Inter','driver')"
+        #step3
+        cursor.execute(query)
+        #step4
+        print(cursor.rowcount,"record inserted")
+        #step5
+        conn.commit()
+        
+        query= "select * from adultinfo.adult"
+        cursor.execute(query)
+        for record in cursor.fetchall():
+            worktype = record[0]
+            education = record[1]
+            occupation = record[2]
+            print(worktype,education,occupation)
+            print("------")        
+        
+        
+        conn.close()
+    else:
+        print('connection not successful.. something went wrong')
+except pymysql.DataError as err:
+    print(err)
+except pymysql.DatabaseError as err:
+    print(err)
+except pymysql.OperationalError as err:
+    print(err)    
+except (pymysql.IntegrityError,pymysql.InternalError) as err:
+    print(err)
+except Exception as err:
+    print(err)       
+            
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+write a program to read adult.csv and insert workclass,occupation,education columns data to the
+database
+--------------------------------------------------------------------------------
+write a program to insert all the records from the database to the excel file
+( excel file should be todays timestamp  : 18_jul_2023.xlsx)
+( check for openpyxl library )
+
+
+
+
+###########
+ pep8 recommentations
+ ###############
+
+
+
+
+from openpyxl import Workbook
+wb = Workbook()
+ws = wb.active
+import time,pymysql
+#import 
+try:
+    filename = time.strftime("%d_%b_%Y.xlsx")
+    print(filename)
+    #step1
+    conn = pymysql.connect(host='127.0.0.1',port=3306,user='root',password='Password@1') 
+    if conn:
+        cursor = conn.cursor()
+        #step2
+        query = "select * from adultinfo.adult"
+        #step3
+        cursor.execute(query)
+        #step4
+        for record in cursor.fetchall():
+            worktype = record[0]
+            education = record[1]
+            occupation = record[2]
+            #print(worktype,education,occupation)
+            ws.append([worktype,education,occupation])
+            #print("------")
+        #step5
+        conn.close()
+        wb.save(filename)
+    else:
+        print('connection not successful.. something went wrong')
+except pymysql.err.DataError as err:
+    print(err)
+except pymysql.err.DatabaseError as err:
+    print(err)
+except pymysql.err.OperationalError as err:
+    print(err)    
+except (pymysql.err.IntegrityError,pymysql.err.InternalError) as err:
+    print(err)
+except Exception as err:
+    print(err)
+    
+    
+    
+    
+    
+    
+# fixed arguments
+def display(a,b):
+    print(a,b)
+
+display(10,20)
+
+# default arguments
+def display(a = 0,b = 0,c = 0):
+    print(a,b,c)
+display()
+display(10)
+display(10,20)
+display(10,20,30)
+
+# keyword arguments
+def display(b,c,a):
+    print(a,b,c)
+display(a = 10 , c = 30, b = 20 )
+
+# variable length arguments
+def display(*args):
+    #print(kargs)
+    for val in args:
+        print(val)
+display(10,20,30,40,45,43,45,2,45,23,1,4,3,0,5,3,2,4,2,'unix')
+
+
+import csv
+import sys, traceback
+import pymysql
+
+try:
+    conn= pymysql.connect(host='127.0.0.1', port=3306, user= 'root', password='Password@1')
+    if conn:
+        cursor= conn.cursor()
+        query= "Select * from adultinfo.adult"
+        cursor.execute(query)
+        for record in cursor:
+            worktype = record[0]
+            education = record[1]
+            occupation = record[2]            
+            with open("datafile.csv", "w") as fileobj:
+               writer= csv.writer(fileobj)
+               writer.writerow([worktype,education,occupation])
+        conn.close()
+    else:
+        print("Conection is not successful..")
+except:
+    print(sys.exc_info())
+    print(traceback.print_exc())
+
+
+
+
+
+
+
+
+
+
+
+
+https://github.com/giridhar276/fedelity10072023/blob/main/pandas_assignments_sols.zip
+
+
+
+
+
+
+
+https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf
+
+https://assets.datacamp.com/blog_assets/PandasPythonForDataScience.pdf
+
+
+
+
+#####################
+occupation - users
+#####################
+
+
+# single ondition
+condition = users['age'] >50
+users[condition]
+
+
+
+
+# multiple conditions
+#select * from table where occupation = 'technician'  and gender='M'
+
+cond1 = users['gender'] == 'M'
+cond2 = users['occupation'] == 'technician'
+
+
+#df[(cond1) & (cond2)]
+users[(cond1) & (cond2)]
+
+
+users[(users['gender'] == 'M')  & (users['occupation'] =='technician')]
+
+    
+
+https://sites.engineering.ucsb.edu/~shell/che210d/numpy.pdf
+
+
+
+
+
+
+
+
+
+
+
+# traditional way
+# single liner function
+def display(a,b):
+    print(a,b)
+
+display(10,20)
+
+
+# pythonic style
+# lambda
+# lambda is the replacment of the single liner function for better performance
+#functioname  = lambda variables:expression
+display = lambda a,b:a + b
+
+display(10,20)
+
+
+
+
+###################
+# pythonic style
+# lambda
+# lambda is the replacment of the single liner function for better performance
+#functioname  = lambda variables:expression
+display = lambda a,b:a + b
+
+display(10,20)
+
+# example2
+
+square = lambda x : x* x if ( x > 0) else x
+square(4)
+
+
+
+
+
+# display all the list of virtual environments
+--------------------------------------------------
+conda env list
+
+
+# create virutal environement
+-------------------------------
+conda create -n myenv1 python==3.8.5
+
+
+# activate your virutal enviornment
+--------------------------------
+conda activate myenv1
+
+
+creating one more virtual environment
+------------------------------------------
+conda create -n myenv2 python==3.11
+
+# activate your virutal enviornment
+--------------------------------
+conda activate myenv2
+
+
+display all the list of packages installed
+---------------------------------------
+conda list
+
+
+removing virtual environment
+-----------------------
+conda env remove --name myenv3
+
+
+
+
+
+
+creating virtual environments with  virtualenv
+-----------------------------------------------------
+
+
+pip install virtualenv
+
+
+
+
+
+
+
+class1.py
+----------
+class Employee:
+    def displayEmployee(self):
+        print('Employee name :',"rita")
+        print('Address   :','hyd')
+        
+        
+emp1 = Employee()
+emp1.displayEmployee()
+    
+
+emp2 = Employee()
+emp2.displayEmployee()
+
+
+
+class2.py
+---------
+class Employee:
+    def getEmployee(self,name,address):
+        self.name= name
+        self.address = address
+        
+    def displayEmployee(self):
+        print("Employee name :",self.name)
+        print("Address       :",self.address)
+
+#object creation
+emp1 = Employee()
+emp1.getEmployee('rita','hyd')
+emp1.displayEmployee()
+
+    
+
+emp2 = Employee()
+emp2.getEmployee('singh','mumbai')
+emp2.displayEmployee()
+
+
+
+
+class3.py
+-----------
+class Employee:
+    # constructor
+    # constructor in python starts with __init__
+    # constructor is invoked automatically when the object is created
+    def __init__(self,name = 'default',address = 'default'):
+        self.name= name
+        self.address = address
+        
+    def displayEmployee(self):
+        print("Employee name :",self.name)
+        print("Address       :",self.address)
+
+#object creation
+emp1 = Employee('rita','hyd')
+emp1.displayEmployee()
+
+emp2 = Employee('singh','mumbai')
+emp2.displayEmployee()
+
+emp3 = Employee('rao','bangalore')
+emp3.displayEmployee()
+
+emp4 = Employee('smita','delhi')
+emp4.displayEmployee()
+
+emp5 = Employee()
+emp5.displayEmployee()
+
+
+
+
+class4.py
+------------
+import csv
+
+class FileOperation:
+    def __init__(self,file):
+        self.file = file
+    def displayOutput(self):
+            self.fobj = open(self.file,'r')
+            self.reader = csv.reader(self.fobj)
+            for record in self.reader:
+                print(record)
+        
+
+file1 = FileOperation('adult.csv')
+file1.displayOutput()
+
+
+
+
+
+
+
+
+fileoperation.py
+-----------------
+
+import csv
+
+class FileOperation:
+    def __init__(self,file):
+        self.file = file
+    def displayOutput(self):
+            self.fobj = open(self.file,'r')
+            self.reader = csv.reader(self.fobj)
+            for record in self.reader:
+                print(record)
+        
+
+# if this program is executed directly ... this condition will be always True
+# if this program is imported to other program... this condition will be False
+if __name__ == "__main__":
+    file1 = FileOperation('adult.csv')
+    file1.displayOutput()
+    
+    
+    
+    
+fileread.py
+-------------
+import fileoperation
+
+
+myobj1 = fileoperation.FileOperation('business.csv')
+myobj1.displayOutput()
+
+
+
+myobj1 = fileoperation.FileOperation('languages.txt')
+myobj1.displayOutput()
+
+
+
+
+###########################################################
+####  connecting to database and inserting to the excel file ############
+######################################
+
+
+from openpyxl import Workbook
+wb = Workbook()
+ws = wb.active
+import time,pymysql
+#import 
+try:
+    filename = time.strftime("%d_%b_%Y.xlsx")
+    print(filename)
+    #step1
+    conn = pymysql.connect(host='127.0.0.1',port=3306,user='root',password='Password@1') 
+    if conn:
+        cursor = conn.cursor()
+        #step2
+        query = "select * from adultinfo.adult"
+        #step3
+        cursor.execute(query)
+        #step4
+        for record in cursor.fetchall():
+            worktype = record[0]
+            education = record[1]
+            occupation = record[2]
+            #print(worktype,education,occupation)
+            ws.append([worktype,education,occupation])
+            #print("------")
+        #step5
+        conn.close()
+        wb.save(filename)
+    else:
+        print('connection not successful.. something went wrong')
+except pymysql.err.DataError as err:
+    print(err)
+except pymysql.err.DatabaseError as err:
+    print(err)
+except pymysql.err.OperationalError as err:
+    print(err)    
+except (pymysql.err.IntegrityError,pymysql.err.InternalError) as err:
+    print(err)
+except Exception as err:
+    print(err)
+
+
+
+
+    
+    
+    
+    
+class DBOpertion:
+    def __init__(self,host,port,user,password):
+        self.host = host
+        self.port = port
+        self.user = user
+        self.password = password
+        
+    def connectDB(self):
+        ##
+    def displayOutout(self):
+        ##
+        
+        
+if __name__ == "__main__":
+    db1 = DBOpertion('127.0.0.1',3306,'root','Password@1')
+    db1.connectDB()
+    db1.displayOutput()
+
+
+
+
+
+
+
+
+##################################
+class Bike:
+    def __init__(self, price, max_speed):
+        self.price = price
+        self.max_speed = max_speed
+        self.miles = 0
+    def displayInfo(self):
+        print("Bike's Price: ${}".format(self.price))
+        print("Bike Maximum Speed: {} mph".format(self.max_speed))
+        print("Total Miles Ridden: {} miles".format(self.miles))
+        return self
+    def ride(self):
+        print("Riding...")
+        self.miles = self.miles +  10
+        return self
+    def reverse(self):
+        if self.miles < 6:
+            print("Cannot reverse bike that hasn't been ridden forward")
+        else:
+            self.miles = self.miles -  5
+            print("Reversing")
+        return self
+    
+    
+if __name__ == "__main__":
+    bike1 = Bike(5000, 250)
+    bike2 = Bike(500, 35)
+    bike3 = Bike(50, 2)
+    print ("Bike 1")
+    bike1.ride().ride().ride().reverse().displayInfo()
+    print ("Bike 2")
+    bike2.ride().ride().reverse().reverse().displayInfo()
+    print ("Bike 3")
+    bike3.reverse().reverse().reverse().displayInfo()
+    
+    
+##################################
+
+
+
+class Call:
+    def __init__(self, id, name, phone_number, time_of_call, reason_for_call):
+        self.id = id
+        self.name = name
+        self.phone_number = phone_number
+        self.time_of_call = time_of_call
+        self.reason_for_call = reason_for_call
+
+    def display(self):
+        print("ID:", self.id)
+        print("Name:", self.name)
+        print("Phone Number:", self.phone_number)
+        print("Time of call (in HHMM format):", self.time_of_call)
+        print("Reason for call:", self.reason_for_call)
+
+class CallCenter:
+    def __init__(self):
+        self.calls = []
+        self.queue_size = 0
+    def add(self, call):
+        call_list = []
+        call_list.append(call.id)
+        call_list.append(call.name)
+        call_list.append(call.phone_number)
+        call_list.append(call.time_of_call)
+        call_list.append(call.reason_for_call)
+        self.calls.append(call_list)
+        self.queue_size += 1
+        return self
+    def remove(self):
+        self.calls.pop(0)
+        self.queue_size -= 1
+        return self
+    def info(self):
+        print('Length of queue:', self.queue_size)
+        for value in self.calls:
+            print("Name:", value[1])
+            print("Phone Number:", value[2])
+call1 = Call(1, 'Ash', 123, 1234, 'thanks')
+call1.display()
+call_center = CallCenter()
+call_center.add(call1)
+call_center.info()
+# print call_center.calls
+
+
+
+###############################################################
+class Car:
+    def __init__(self, price, speed, fuel, mileage):
+        self.price = price
+        self.speed = speed
+        self.fuel = fuel
+        self.mileage = mileage
+        if self.price > 10000:
+            self.tax = 0.15 # 15%
+        else:
+            self.tax = 0.12 # 12%
+        self.display_all()
+
+    def display_all(self):
+        # print("Price: ${}".format(self.price))
+        # print("Speed: {} mph".format(self.speed))
+        # print("Fuel:", self.fuel)
+        # print("Mileage: {} mpg".format(self.mileage))
+        # print("Tax: {}%".format(int(self.tax * 100)))
+        print("Price:".ljust(10),self.price)
+        print("Speed:".ljust(10),self.speed)
+        print("Fuel:".ljust(10), self.fuel)
+        print("Mileage: ".ljust(10),self.mileage)
+        print("Tax: ".ljust(10),int(self.tax * 100))   
+
+print("Car 1: ")
+car1 = Car(2000, 35, 'Full', 15)
+print("Car 2: ")
+car2 = Car(2000, 5, 'Not Full', 105)
+print ("Car 3: ")
+car3 = Car(2000, 15, 'Kind of Full', 95)
+print("Car 4: ")
+car4 = Car(2000, 25, 'Full', 25)
+print("Car 5: ")
+car5 = Car(2000, 45, 'Empty', 25)
+print("Car 6: ")
+car6 = Car(20000000, 35, 'Empty', 15)
+
+
+
+
+
+
+###############################################################
+class Patient:
+    def __init__(self, id, name, allergies, bed_number=None):
+        self.id = id
+        self.name = name
+        self.allergies = allergies
+        self.bed_number = bed_number
+class Hospital:
+    def __init__(self, name, capacity):
+        self.name = name
+        self.patients = []
+        self.capacity = capacity
+    def add(self, patient):
+        if len(self.patients) >= self.capacity:
+            print('Sorry! The Hospital is full!')
+        else:
+            patient_dictionary = {
+            'ID': patient.id,
+            'Name': patient.name,
+            'Allergies': patient.allergies,
+            'Bed Number': patient.bed_number
+            }
+            self.patients.append(patient_dictionary)
+            print ('{} has been admitted.'.format(patient.name))
+    def discharge(self, name):
+        for value in self.patients:
+            if value['Name'] == name:
+                value['Bed Number'] = None
+                self.patients.remove(value)
+###############################################################
+class Patient:
+    def __init__(self, id, name, allergies, bed_number=None):
+        self.id = id
+        self.name = name
+        self.allergies = allergies
+        self.bed_number = bed_number
+class Hospital:
+    def __init__(self, name, capacity):
+        self.name = name
+        self.patients = []
+        self.capacity = capacity
+    def add(self, patient):
+        if len(self.patients) >= self.capacity:
+            print('Sorry! The Hospital is full!')
+        else:
+            patient_dictionary = {
+            'ID': patient.id,
+            'Name': patient.name,
+            'Allergies': patient.allergies,
+            'Bed Number': patient.bed_number
+            }
+            self.patients.append(patient_dictionary)
+            print ('{} has been admitted.'.format(patient.name))
+    def discharge(self, name):
+        for value in self.patients:
+            if value['Name'] == name:
+                value['Bed Number'] = None
+                self.patients.remove(value)
+patient1 = Patient(1, 'Ash', 'Wool', 1)
+patient2 = Patient(1, 'Sterling', 'Chocolate', 3)
+patient3 = Patient(1, 'Alish', 'Puppies', 7)
+patient4 = Patient(1, 'Andre', 'Kitties', 9)
+hospital = Hospital('kings Hospital', 3)
+hospital.add(patient1)
+hospital.add(patient2)
+hospital.add(patient3)
+hospital.add(patient4)
+hospital.discharge('Alish')
+hospital.discharge('Sterling')
+hospital.add(patient4)
+
+
+###############################################################
+class Patient:
+    def __init__(self, id, name, allergies, bed_number=None):
+        self.id = id
+        self.name = name
+        self.allergies = allergies
+        self.bed_number = bed_number
+class Hospital:
+    def __init__(self, name, capacity):
+        self.name = name
+        self.patients = []
+        self.capacity = capacity
+    def add(self, patient):
+        if len(self.patients) >= self.capacity:
+            print('Sorry! The Hospital is full!')
+        else:
+            patient_dictionary = {
+            'ID': patient.id,
+            'Name': patient.name,
+            'Allergies': patient.allergies,
+            'Bed Number': patient.bed_number
+            }
+            self.patients.append(patient_dictionary)
+            print ('{} has been admitted.'.format(patient.name))
+    def discharge(self, name):
+        for value in self.patients:
+            if value['Name'] == name:
+                value['Bed Number'] = None
+                self.patients.remove(value)
+patient1 = Patient(1, 'Ash', 'Wool', 1)
+patient2 = Patient(1, 'Sterling', 'Chocolate', 3)
+patient3 = Patient(1, 'Alish', 'Puppies', 7)
+patient4 = Patient(1, 'Andre', 'Kitties', 9)
+hospital = Hospital('kings Hospital', 3)
+hospital.add(patient1)
+hospital.add(patient2)
+hospital.add(patient3)
+hospital.add(patient4)
+hospital.discharge('Alish')
+hospital.discharge('Sterling')
+hospital.add(patient4)
+
+###############################################################
+class Patient:
+    def __init__(self, id, name, allergies, bed_number=None):
+        self.id = id
+        self.name = name
+        self.allergies = allergies
+        self.bed_number = bed_number
+class Hospital:
+    def __init__(self, name, capacity):
+        self.name = name
+        self.patients = []
+        self.capacity = capacity
+    def add(self, patient):
+        if len(self.patients) >= self.capacity:
+            print('Sorry! The Hospital is full!')
+        else:
+            patient_dictionary = {
+            'ID': patient.id,
+            'Name': patient.name,
+            'Allergies': patient.allergies,
+            'Bed Number': patient.bed_number
+            }
+            self.patients.append(patient_dictionary)
+            print ('{} has been admitted.'.format(patient.name))
+    def discharge(self, name):
+        for value in self.patients:
+            if value['Name'] == name:
+                value['Bed Number'] = None
+                self.patients.remove(value)
+patient1 = Patient(1, 'Ash', 'Wool', 1)
+patient2 = Patient(1, 'Sterling', 'Chocolate', 3)
+patient3 = Patient(1, 'Alish', 'Puppies', 7)
+patient4 = Patient(1, 'Andre', 'Kitties', 9)
+hospital = Hospital('kings Hospital', 3)
+hospital.add(patient1)
+hospital.add(patient2)
+hospital.add(patient3)
+hospital.add(patient4)
+hospital.discharge('Alish')
+hospital.discharge('Sterling')
+hospital.add(patient4)
+
+
+patient1 = Patient(1, 'Ash', 'Wool', 1)
+patient2 = Patient(1, 'Sterling', 'Chocolate', 3)
+patient3 = Patient(1, 'Alish', 'Puppies', 7)
+patient4 = Patient(1, 'Andre', 'Kitties', 9)
+hospital = Hospital('kings Hospital', 3)
+hospital.add(patient1)
+hospital.add(patient2)
+hospital.add(patient3)
+hospital.add(patient4)
+hospital.discharge('Alish')
+hospital.discharge('Sterling')
+hospital.add(patient4)
+
+
+
+###############################################################
+class Patient:
+    def __init__(self, id, name, allergies, bed_number=None):
+        self.id = id
+        self.name = name
+        self.allergies = allergies
+        self.bed_number = bed_number
+class Hospital:
+    def __init__(self, name, capacity):
+        self.name = name
+        self.patients = []
+        self.capacity = capacity
+    def add(self, patient):
+        if len(self.patients) >= self.capacity:
+            print('Sorry! The Hospital is full!')
+        else:
+            patient_dictionary = {
+            'ID': patient.id,
+            'Name': patient.name,
+            'Allergies': patient.allergies,
+            'Bed Number': patient.bed_number
+            }
+            self.patients.append(patient_dictionary)
+            print ('{} has been admitted.'.format(patient.name))
+    def discharge(self, name):
+        for value in self.patients:
+            if value['Name'] == name:
+                value['Bed Number'] = None
+                self.patients.remove(value)
+patient1 = Patient(1, 'Ash', 'Wool', 1)
+patient2 = Patient(1, 'Sterling', 'Chocolate', 3)
+patient3 = Patient(1, 'Alish', 'Puppies', 7)
+patient4 = Patient(1, 'Andre', 'Kitties', 9)
+hospital = Hospital('kings Hospital', 3)
+hospital.add(patient1)
+hospital.add(patient2)
+hospital.add(patient3)
+hospital.add(patient4)
+hospital.discharge('Alish')
+hospital.discharge('Sterling')
+hospital.add(patient4)
+
+
+
+
+################################################
+
+
+class Product:
+    def __init__(self, price, item_name, weight, brand, status='For Sale'):
+        self.price = price
+        self.item_name = item_name
+        self.weight = weight
+        self.brand = brand
+        self.status = status
+
+    def sell(self):
+        self.status = 'sold'
+        return self
+
+    def add_tax(self, tax):
+        return "Price after sales tax: ${}".format(self.price * (1 + (tax/100.0)))
+
+    def return_item(self, reason_for_return):
+        if reason_for_return.lower() == 'defective':
+            self.status = 'Defective'
+            self.price = 0
+        elif reason_for_return.lower() == 'like new':
+            self.status = 'For Sale'
+        elif reason_for_return.lower() == 'open box':
+            self.status = 'Used'
+            self.price = 0.8 * self.price # 20% discount
+        return self
+
+    def display_all(self):
+        print("Price: ${}".format(self.price))
+        print("Item Name:", self.item_name)
+        print("Weight: {}g".format(self.weight))
+        print("Brand:", self.brand)
+        print("Status:", self.status)
+        return self
+
+chocolate = Product(5, 'chocolate', 100, 'Dairy Milk')
+
+print("Initial Specs: ")
+chocolate.display_all()
+
+print ("Specs after adding tax: ")
+print(chocolate.add_tax(15))
+
+print("Specs after selling: ")
+chocolate.sell().display_all()
+
+print("Specs after returning: ")
+chocolate.return_item('defective').display_all()
+
+#######################################################################
+
+class A:
+    
+    def __init__(self):
+        self.__priv = "I am private"
+        self._prot = "I am protected"
+        self.pub = "I am public"
+        print(self.__priv)        
+
+obj = A()
+
+print(obj.pub)
+print(obj._prot)
+print(obj.__priv)
+    
+    
+    
+#######################################################################
+
+class SampleClass:
+    globalNumVariable = 3691
+    globalStringVariable = "Some string.."
+    b = 987 # b is a global variable
+    _b = 654 # can be called as protected
+    __b = 321 # private
+    # constrcutor.
+    def __init__(self):
+        self.a = 123    # OK to access directly
+        self._a = 456   # should be considered protected
+        self.__a = 789  # considered private, name mangled , more secure Data
+    def getSecureData(self):
+        print("I am a secure data",self.__a)
+    def _getProtectedData(self):
+        print ("inside single underscore")
+        print(self._a)
+    # Below method (which is inside the class) is considered as Private method(used double underscore
+    # before the method name.
+    def __getMoreSecureDataMethod(self):
+        print(self.__a)
+
+if __name__ == '__main__':
+    # Lets first try to create an object of SampleClass.
+    objOfSampleClass = SampleClass() # object will get created here.
+    m = SampleClass() # creating another object for the same class (reason : n number of obj can be created for a class)
+    # just for your reference.
+    print(objOfSampleClass.b)
+    print(objOfSampleClass._b)
+    # If you want to bring private value/variable outside the class, normally its not possible.
+    # Below is going to throw an error (uncomment and execute it)
+    #print(objOfSampleClass.__b)
+    # But if you do still, want to bring the value outside the class. then follow the below line of code.
+    # using objOfSampleClass, lets call two global variables
+    print(objOfSampleClass.globalNumVariable) # 3691
+    print(objOfSampleClass.globalStringVariable) #
+    # At the time of object creation, we are creating three variables Isn't it? (check __init__ method())
+    # lets call those variable values one by one.
+    print(objOfSampleClass.a)  # output is 123
+    print(objOfSampleClass._a)  # output is 456
+    #print(objOfSampleClass.__a)  # uncomment and run this line, it will throw an error.
+    # below line contains getSecureData() - which is a public method, inside this method we are printing __a value,
+    print("calling a method: ", objOfSampleClass.getSecureData())
+    print("calling a protected method: ", objOfSampleClass._getProtectedData())
+    # # Below method has __ [two underscores], which is considered as private method here. So it cannot be called outside the class.
+    # Uncomment the below line and test.
+    # print("calling a method: ", m.__getMoreSecureData())
+
+    # here we are tyring to get the method out, but it's not possible.
+    #print("calling a method: ", m._SampleClass__getMoreSecureData())
+
+
+
+
+
+
+#####################
+
+# The code below shows how a class can inherit from another class.
+# We have two classes, `Date` and `Time`. Here `Time` inherits from
+# `Date`.
+
+# Any class inheriting from another class (also called a Parent class)
+# inherits the methods and attributes from the Parent class.
+
+# Hence, any instances created from the class `Time` can access
+# the methods defined in the parent class `Date`.
+
+
+class Date:   # Parent # Base # Super
+    def get_date(self):
+        print("2016-05-14")
+
+
+
+class Time(Date): # Child # inherited
+    def get_time(self):
+        print("08:00:00")
+
+# Creating an instance from `Date`
+dt = Date()
+dt.get_date()  # Accesing the `get_date()` method of `Date`
+print("--------")
+
+# Creating an instance from `Time`.
+tm = Time()
+tm.get_time()   # Accessing the `get_time()` method from `Time`.
+# Accessing the `get_date() which is defined in the parent class `Date`.
+tm.get_date()
+
+
+
+
+
+
+
+########################
+# This code shows that an Instance can access it's own
+# attributes as well as Class attributes.
+
+# We have a class attribute named 'count', and we add 1 to
+# it each time we create an instance. This can help count the
+# number of instances at the time of instantiation.
+
+
+class InstanceCounter:
+    count = 0
+
+    def __init__(self, val):
+        self.val = val
+        InstanceCounter.count += 1
+
+
+    def set_val(self, newval):
+        self.val = newval
+
+    def get_val(self):
+        return self.val
+
+    def get_count(self):
+        return InstanceCounter.count
+
+a = InstanceCounter(5)
+b = InstanceCounter(10)
+c = InstanceCounter(15)
+
+for obj in (a, b, c):
+    print("value of obj: {}".format(obj.get_val()))
+    print("Count : {}".format(obj.get_count())) #3
+    
+
+
+
+###########################################################################################
+
+
+
+class Person:
+    # initializing the variables
+    name = ""
+    age = 0
+    # defining constructor
+    def __init__(self, person_name, person_age):
+        self.name = person_name
+        self.age = person_age
+        # defining class methods
+    def show_name(self):
+        print(self.name)
+    def show_age(self):
+        print(self.age)
+
+# definition of subclass starts here
+class Student(Person):
+    studentId = ""
+
+    def __init__(self, student_name, student_age, student_id):
+        #Person.
+        super().__init__(student_name, student_age)
+        self.studentId = student_id
+
+    def get_id(self):
+        return self.studentId  # returns the value of student id
+
+# end of subclass definition
+
+
+# Create an object of the superclass
+person1 = Person("Richard", 23)
+# call member methods of the objects
+person1.show_age()
+# Create an object of the subclass
+student1 = Student("Max", 22, "102")
+print(student1.get_id())
+student1.show_name()    
+
+
+###################################################
+
+
+class Person:
+    # initializing the variables
+    name = ""
+    age = 0
+    # defining constructor
+    def __init__(self, person_name, person_age):
+        self.name = person_name
+        self.age = person_age
+        # defining class methods
+    def show_name(self):
+        print(self.name)
+    def show_age(self):
+        print(self.age)
+
+# definition of subclass starts here
+class Student(Person):
+    studentId = ""
+
+    def __init__(self, student_name, student_age, student_id):
+        #Person.
+        super().__init__(student_name, student_age)
+        self.studentId = student_id
+
+    def get_id(self):
+        return self.studentId  # returns the value of student id
+
+# end of subclass definition
+
+
+# Create an object of the superclass
+person1 = Person("Richard", 23)
+# call member methods of the objects
+person1.show_age()
+# Create an object of the subclass
+student1 = Student("Max", 22, "102")
+print(student1.get_id())
+student1.show_name()    
+
+
+
+#####################################################
+
+
+class SchoolMember:
+    '''Represents any school member.'''
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        print('(Initialized SchoolMember: {})'.format(self.name))
+
+    def tell(self):
+        '''Tell my details.'''
+        print('Name:"{}" Age:"{}"'.format(self.name, self.age), end=" ")
+
+
+class Teacher(SchoolMember):
+    '''Represents a teacher.'''
+    def __init__(self, name, age, salary):
+        SchoolMember.__init__(self, name, age)
+        self.salary = salary
+        print('(Initialized Teacher: {})'.format(self.name))
+
+    def tell(self):
+        SchoolMember.tell(self)
+        print('Salary: "{:d}"'.format(self.salary))
+
+class Student(SchoolMember):
+    '''Represents a student.'''
+    def __init__(self, name, age, marks):
+        SchoolMember.__init__(self, name, age)
+        self.marks = marks
+        print('(Initialized Student: {})'.format(self.name))
+
+    def tell(self):
+        #SchoolMember.tell(self)
+        print('Marks: "{:d}"'.format(self.marks))
+
+t = Teacher('Mrs. Rita', 40, 30000)
+s = Student('Mr.Ram', 25, 75)
+
+# prints a blank line
+print()
+
+members = [t, s]
+for member in members:
+    # Works for both Teachers and Students
+    member.tell()
+
+
+
+###############################################
+
+
+
+import paramiko
+	
+host = '192.168.163.135'
+port = 22
+username = 'user'
+password = 'password'
+
+ssh = paramiko.SSHClient()	
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+ssh.connect(hostname=host, port=port, username=username, password = 'password')
+
+stdin,stdout,stderr = ssh.exec_command("hostname -I")	
+print(stdout)
+
+for line in stdout.read().splitlines():
+    print(line.decode('utf-8'))
+
+ssh.close()
+
+
+
+
+########## from files from server1 to server2
+import paramiko
+import os
+	
+host = '192.168.163.135'
+port = 22
+username = 'user'
+password = 'password'
+	
+ssh = paramiko.SSHClient()
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+ssh.connect(hostname=host,  username=username, password = 'password')
+sftp = ssh.open_sftp()
+
+remote_path = '/home/user/Desktop/localfiles/'
+
+local_path = '/home/user/Desktop/localfiles/'
+
+for file in os.listdir(local_path):
+    file_local = local_path + file
+    file_remote = remote_path + file
+    sftp.put(file_local , file_remote)
+    print(file_local  +  '  >>>  ' + file_remote )
+
+ssh.close()
+sftp.close()
+
+
+
+
+
+
+
+
+
+
+
+################## rest1.py #############################
+import requests
+import json
+
+username = "giridhar276"
+password = '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'
+
+server = 'https://api.github.com/'
+
+
+data = requests.get(server,auth=(username,password))
+
+if data.status_code == 200:
+    #converting to the dictionary
+    jdata = json.loads(data.text)
+    for key,value in jdata.items():
+        print(key.ljust(20),value)
+        
+        
+        
+        
+        
+        
+
+import requests
+import json
+
+username = "giridhar276"
+password = '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'
+
+server = 'https://api.github.com/'
+
+# just like select query
+data = requests.get(server,auth=(username,password))
+
+if data.status_code == 200:
+    #converting the string to the dictionary
+    jdata = json.loads(data.text)
+    for key,value in jdata.items():
+        print(key.ljust(20),value)
+        
+        
+        
+        
+
+import requests
+import json
+
+username = "giridhar276"
+password = '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'
+
+server = 'https://api.github.com/'
+
+# just like select query
+data = requests.get(server,auth=(username,password))
+
+if data.status_code == 200:
+    #converting the string to the dictionary
+    jdata = json.loads(data.text)
+    for key,value in jdata.items():
+        print(key.ljust(20),value)
+        
+        
+        
+        
+        
+
+import requests
+import json
+
+username = "giridhar276"
+password = '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'
+
+server = 'https://api.github.com/'
+
+# just like select query
+data = requests.get(server,auth=(username,password))
+
+if data.status_code == 200:
+    #converting the string to the dictionary
+    jdata = json.loads(data.text)
+    for key,value in jdata.items():
+        print(key.ljust(20),value)
+        
+        
+        
+        
+        
+https://gist.github.com/giridhar276/b9880154f94db604680825d47b5356bd
+
+
+
+
+
+
+
+
+
+
+
+
+   
+import requests
+import json
+
+server = "https://api.github.com"
+url = server + "/gists"
+user = "yourusrename"
+
+print("checking ", url, "using user:", user)
+
+local_file = "students.csv"    # change this filename accordingly
+with open(local_file) as fh:
+    mydata = fh.read()
+files = {
+    "description": "rest api - giri testing",
+    "public": "true",
+    "user" : user,
+    "files": {
+    local_file: {
+    "content": mydata
+        }
+      }
+}
+r1 = requests.post(url, data=json.dumps(files), auth=(user,'yourtoken'))
+print(r1.json())
+
+
+
+
+
+https://535999565191.signin.aws.amazon.com/console
+
+username :  yourusername
+password :  Password@1
+
+
+
+
+
+Python-U01	Password@1 Sandeepya   user1
+Python-U02	Password@1 Snehashish user2
+Python-U03	Password@1 Veena HR user3
+Python-U04	Password@1 Yeswanth user4
+Python-U05	Password@1 Bhargavi user5
+Python-U06	Password@1 Dinesh user6
+Python-U07	Password@1 Feba user7
+Python-U08	Password@1 Mutharasu user8
+Python-U09	Password@1 Pragati user9
+Python-U10	Password@1 Radhika user10
+Python-U11	Password@1 Saleela user11
+Python-U12	Password@1 Sandeep user12
+Python-U13	Password@1 Sasikala user13
+Python-U14	Password@1 Shreenath user14
+Python-U15	Password@1 Harsha user15
+Python-U16	Password@1 Dinesh user16
+Python-U17	Password@1 Yeswanth user17
+Python-U18	Password@1 Trishul usre18
+Python-U19	Password@1 surajkant user19
+Python-U21	Password@1 Feba user20
+Python-U22	Password@1 Veena N  user21
+Python-U23	Password@1 Shwet user22
+Python-U24	Password@1 Thejaswini user23
+Python-U25	Password@1 dharun user24
+
+
+
+
+
+
+
+
+
+import boto3
+aws_mag_con=boto3.session.Session(profile_name="user21")
+iam_con=aws_mag_con.resource('iam')
+
+# display all the users
+for each_user in iam_con.users.all():
+    print(each_user.name)
+    
+
+    
+## display all the groups
+for each_user in iam_con.groups.all():
+    print(each_user.name)
+    
+    
+    
+# display al the buckets
+aws_mag_con=boto3.session.Session(profile_name="user21")
+s3_con=aws_mag_con.resource('s3')
+for bucket in s3_con.buckets.all():
+    print(bucket.name)
+
+
+
+
+
+
+
+
+######################################################################################################
+
+
+
+import boto3
+
+AWS_REGION = "ap-south-1"
+
+
+session=boto3.session.Session(profile_name="user21")
+client = session.client("s3", region_name=AWS_REGION)
+bucket_name = "giri09062023new1"
+location = {'LocationConstraint': AWS_REGION}
+
+response = client.create_bucket(Bucket=bucket_name, CreateBucketConfiguration=location)
+
+print("Amazon S3 bucket has been created")
+
+
+
+## display buckets
+import boto3
+
+AWS_REGION = "ap-south-1"
+
+session=boto3.session.Session(profile_name="user21")
+client = session.client("s3", region_name=AWS_REGION)
+
+response = client.list_buckets()
+
+print("Listing Amazon S3 Buckets:")
+
+for bucket in response['Buckets']:
+    print(f"-- {bucket['Name']}")
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+# delete buckets
+import boto3
+
+AWS_REGION = "ap-south-1"
+
+session=boto3.session.Session(profile_name="user21")
+client = session.client("s3", region_name=AWS_REGION)
+
+bucket_name = "giri09062023new"
+
+client.delete_bucket(Bucket=bucket_name)
+
+print("Amazon S3 Bucket has been deleted")    
+
+
+
+
+
+
+
+
+
+
+
+#
+import pathlib
+import boto3
+from glob import glob
+
+
+
+AWS_REGION = "ap-south-1"
+S3_BUCKET_NAME = "giri09062023new"
+
+session=boto3.session.Session(profile_name="user21")
+s3_client = session.client("s3", region_name=AWS_REGION)
+
+
+def upload_file(file_name, bucket, object_name=None, args=None):
+    if object_name is None:
+        object_name = file_name
+
+    s3_client.upload_file(file_name, bucket, object_name, ExtraArgs=args)
+    print(f"'{file_name}' has been uploaded to '{S3_BUCKET_NAME}'")
+    
+    s3_client.upload_file(file_name, bucket, object_name, ExtraArgs=args)
+    print(f"'{file_name}' has been uploaded to '{S3_BUCKET_NAME}'")
+
+
+files = glob("*.txt")
+print(files)
+
+for file in files:
+    upload_file(file, S3_BUCKET_NAME)    
+    
+    
+    
+    
+    
+    
+import pathlib
+import boto3
+from glob import glob
+import os
+
+
+AWS_REGION = "ap-south-1"
+S3_BUCKET_NAME = "giri09062023new"
+
+session=boto3.session.Session(profile_name="user21")
+s3_client = session.client("s3", region_name=AWS_REGION)
+
+
+def upload_file(file_name, bucket, object_name=None, args=None):
+    if object_name is None:
+        object_name = file_name
+
+    s3_client.upload_file(file_name, bucket, object_name, ExtraArgs=args)
+    print(f"'{file_name}' has been uploaded to '{S3_BUCKET_NAME}'")
+    
+    s3_client.upload_file(file_name, bucket, object_name, ExtraArgs=args)
+    print(f"'{file_name}' has been uploaded to '{S3_BUCKET_NAME}'")
+
+os.chdir(r'C:\Users\Adminstrator\Desktop\programs')
+files = os.listdir()
+print(files)
+
+for file in files:
+    upload_file(file, S3_BUCKET_NAME)    
+    
+    
+    
+
+
+
+
+
